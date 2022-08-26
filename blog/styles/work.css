@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* прижатие футера */
+body {
+  display: flex;
+  flex-direction: column;
+  /* overflow: auto; */
+}
+
+.container {
+  max-width: 810px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header {
+  width: 100%;
+  height: 280px;
+  background: url("../img/2.png") center no-repeat;
+  position: relative;
+  flex: 0 0 auto;
+}
+.header::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(249.64deg, rgba(199, 50, 50, 0.2) 43.72%, rgba(33, 211, 190, 0) 69.28%), linear-gradient(90.6deg, rgba(60, 55, 50, 0.99) 7.38%, rgba(98, 74, 52, 0.7) 40.29%, #0D0D0D 78.35%), rgba(85, 82, 89, 0.88);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+.header__text {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 18vh;
+  opacity: .3;
+  text-shadow: #BF3F57 2px 10px;
+  z-index: 10;
+  
+
+}
+.header__inner{
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+.header__line {
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+}
+.nav {
+  position: absolute;
+  z-index: 10;
+  margin-right: 2rem;
+  right: 0;
+  bottom: -110px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav__list-item+.nav__list-item {
+  margin-left: 1rem;
+}
+
+.nav__link {
+  width: 130px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F2DAC4;
+  border-radius: 20px;
+  transition: all .3s ease;
+  opacity: .5;
+  
+}
+
+.nav__link:hover {
+  height: 130px;
+  background: #BF3F57;
+  border-radius: 100%;
+  opacity: 1;
+  transform: translateY(30px);
+}
+
+
+
+
+
+.main {
+  flex: 1 0 auto;
+  margin: 60px 0;
+}
+.main__inner {
+  background: rgba(217, 217, 217, 0.22);
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+
+
+}
+
+
+p{
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+.link__text{
+  color: #BF3F57
+}
+.link__text:hover {
+  color: #84515a
+}
+.data{
+  width: 100%;
+  display: block;
+  text-align: end;
+  margin-bottom: 1rem;
+  opacity: .5;
+  font-style: italic;
+
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color:#555259;
+  color: white;
+
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 1rem;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  margin: 1rem 0;
+  border-radius: 20px;
+}
+
+/* подвал */
+
+.footer {
+  width: 100%;
+  min-height: 120px;
+  background: #0D0D0D;
+
+  display: flex;
+  align-items: flex-end;
+  flex: 0 0 auto;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  opacity: .6;
+
+}
+
+.footer__date {
+  margin: 1rem 0;
+}
+
+@media (max-width:650px) {
+
+  .nav {
+    position: static;
+    margin-right: 0;
+    margin-bottom: 1rem;
+
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+
+  .nav__list-item+.nav__list-item {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .nav__link {
+      width: 130px;
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F2DAC4;
+      border-radius: 20px;
+      transition: all .3s ease;
+      opacity: .5;
+  
+    }
+  
+  .nav__link:hover {
+      height: 130px;
+      background: #BF3F57;
+      border-radius: 100%;
+      opacity: 1;
+      transform: translateY(5px);
+    }
+}
+
+@media (max-width: 425px) {
+  .header__text {
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    font-size: 12vh;
+    opacity: .3;
+    text-shadow: #BF3F57 2px 10px;
+
+
+  }
+}
