@@ -30,8 +30,9 @@ span{
 }
 
 .container{
-	max-width: 1187px;
+	max-width: 1197px;
 	margin: 0 auto;
+  padding: 10px;
 }
 /*определяем сетку*/
 
@@ -457,7 +458,7 @@ span{
     }
 }
 
-@media screen and (max-width:976px){
+@media (max-width:976px){
   .grid {
       display: grid;
       grid-template-columns: 1fr;
